@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>sdl-dialog demo</title>
+    <script type="module" src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script type="module" src="../src/components/sdl-dialog.js"></script>
+    <script type="module">
+      import '@polymer/iron-demo-helpers/demo-pages-shared-styles.js';
+      import '@polymer/iron-demo-helpers/demo-snippet.js';
+      import '@polymer/paper-input/paper-input.js';
+      import '@polymer/iron-icons/iron-icons.js';
+      import '@polymer/iron-icon/iron-icon.js';
+      import '@polymer/iron-form/iron-form.js';
+      import '@vaadin/vaadin-button/vaadin-button.js';
+    </script>
+
+
+    <custom-style>
+      <style is="custom-style" include="demo-pages-shared-styles">
+      </style>
+    </custom-style>
+  </head>
+  <body>
+    <div class="vertical-section-container centered">
+      <h1>Basic sdl-dialog demo -- with opened="true"</h1>
+
+      <demo-snippet>
+        <template>         
+
+<!-- If using as a stand-alone-component:  use sdl-dialog-loader.js
+<script src="./node_modules/@sdl-web/sdl-dialog/build-component/sdl-dialog-loader.js"></script> -->
+
+<!-- If using in an existing build project:  use sdl-dialog.js directly-->
+<!-- <script type="import" src="@sdl-web/sdl-dialog/src/components/sdl-dialog.js"></script>  -->
+
+<!-- Now add sdl-dialog to html section -->
+<sdl-dialog id='dialog1' opened="true">  
+  <!-- Put whatever input fields (and styling) you want into this slot -->
+  <div>
+      <h2>Header</h2>
+      <p>This is a test of the emergency broadcast system.   This is only a test...</p>
+      <div class="buttons">
+        <vaadin-button dialog-dismiss>Cancel</vaadin-button>
+        <vaadin-button dialog-confirm autofocus>Accept</vaadin-button>
+      </div>
+  </div>
+
+  
+</sdl-dialog>
+
+
+
+
+    <script>
+    addEventListener('DOMContentLoaded', function(){ 
+
+        setTimeout(function(){ 
+          console.log("Start Listening...");
+        var srch1 = document.querySelector('#srch-bar1');
+        var srch2 = document.querySelector('#srch-bar2');
+        var srch3 = document.querySelector('#srch-bar3');
+
+
+          
+        }, 1000);
+
+
+      }, false);
+
+    </script>
+  </body>
+</html>
